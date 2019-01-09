@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 
 class FormularioGasto extends Component {
 
@@ -12,7 +14,7 @@ crearGasto = (e) => {
 
 // prevenir el default
 
-e.prevenDefault();
+e.preventDefault();
 
 // crear el objeto con los datos
 
@@ -52,6 +54,10 @@ e.currentTarget.reset();
       </form>
     )
   }
+}
+
+ FormularioGasto.propTypes = {
+   agregarGasto: PropTypes.func.isRequired
 }
 
 export default FormularioGasto;

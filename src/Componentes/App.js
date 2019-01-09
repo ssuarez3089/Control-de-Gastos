@@ -71,6 +71,8 @@ restarPresupuesto = cantidad => {
 
 restante -= restar;
 
+restante = String(restante);
+
   //agregamos el nuevo state
 
   this.setState({
